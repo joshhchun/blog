@@ -7,7 +7,7 @@ ShowReadingTime: true
 
 **here is a node class**
 
-```
+``` python
 class Node:
     def __init__(self, value):
         self.value = value
