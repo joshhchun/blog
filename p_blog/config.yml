@@ -1,0 +1,90 @@
+baseURL: "/"
+languageCode: en-us
+title: jchun.me
+theme: PaperMod
+
+enableRobotsTXT: true
+enableInlineShortcodes: true
+enableEmoji: true
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+params:
+    env: production
+    cover:
+        linkFullImages: true
+    title: jchun.me
+    author: Josh Chun
+    DateFormat: "January 2, 2006"
+    defaultTheme: dark
+    ShowReadingTime: true
+    ShowShareButtons: false
+    ShowPostNavLinks: false
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    comments: true
+    hidemeta: false
+    hideSummary: false
+    showtoc: false
+    tocopen: false
+
+    assets:
+        # disableHLJS: true # to disable highlight.js
+        # disableFingerprinting: true
+        favicon: "<link / abs url>"
+        favicon16x16: "<link / abs url>"
+        favicon32x32: "<link / abs url>"
+        apple_touch_icon: "<link / abs url>"
+        safari_pinned_tab: "<link / abs url>"
+
+    # Picture next to the home
+    # label:
+    #   text: "jchun.me"
+    #   icon: beach3.jpg
+    #   iconHeight: 35
+
+    # home-info mode
+    homeInfoParams:
+        Title: "Welcome to my blog! \U0001F44B"
+        Content:
+            "My name is Joshua Chun, and I am currently studying Computer Science at the [University of Notre Dame](https://www.nd.edu/).
+            This is my personal website where I will be posting [cool software-related findings](https://jchun.me/tech/),
+            projects, [life-updates](https://jchun.me/life/), and everything else in between."
+
+    socialIcons:
+        - name: github
+          url: "https://github.com/joshhchun"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/josh-chun-55254417a/"
+
+cover:
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+menu:
+    main:
+        - identifier: tech
+          name: tech
+          url: /posts/tech/
+          weight: 10
+        - identifier: random
+          name: random
+          url: /posts/random/
+          weight: 10
+        - identifier: life
+          name: life
+          url: /posts/life/
+          weight: 15
+        - indentifier: about
+          name: about me
+          url: /about/
+          weight: 5
+        - indentifier: archives
+          name: archives
+          url: /archives/
+          weight: 20
