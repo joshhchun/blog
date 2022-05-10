@@ -1,4 +1,4 @@
-name: Hugo CI & deploy
+name: Hugo CI & Deploy
 
 on:
   push:
