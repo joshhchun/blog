@@ -24,7 +24,7 @@ jobs:
       - name: Build website with Hugo
         run: hugo --minify --i18n-warnings
       - name: Deploy website with rsync
-        uses: burnett01/rsync-deployments@4.1
+        uses: burnett01/rsync-deployments@5.2
         with:
           switches: -avzr --quiet --delete
           path: public/
