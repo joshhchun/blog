@@ -13,12 +13,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
+          repository: joshhchun/blog/p_blog
           submodules: true
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.98.0'
+          hugo-version: '0.91.2'
           extended: true
+      - name: cache
+        uses: actions/cache@v2
+        with:
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
       - name: Build website with Hugo
         run: hugo --minify 
       - name: Deploy website with rsync
@@ -30,3 +38,5 @@ jobs:
           remote_host: ${{ secrets.REMOTE_HOST }}
           remote_user: ${{ secrets.REMOTE_USER }}
           remote_key: ${{ secrets.REMOTE_KEY }}
+          
+  
