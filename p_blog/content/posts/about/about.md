@@ -10,7 +10,7 @@ cover:
     image: beach.jpg
     alt: Image Loading
     # Add link
-weight: 1  
+weight: 1
 ---
 
 ---
@@ -55,12 +55,13 @@ This summer, I will be working at **[MITRE](https://www.mitre.org/)** as a Softw
 
 ## Personal
 
-I was born in [Columbus, Ohio](https://en.wikipedia.org/wiki/Columbus,_Ohio), and I have lived there for all my life (excluding college). Coming to college, I have realized that Ohio is seen as a very undesirable location to live. Never really understood that though... we have corn! :corn:&nbsp;&nbsp;I have **loved** my time in Ohio, and I truly would not trade it for anything in the world. (_okay maybe bring in Hawaii or Spain and we can start talking_).  
+I was born in [Columbus, Ohio](https://en.wikipedia.org/wiki/Columbus,_Ohio), and I have lived there for all my life (excluding college). Coming to college, I have realized that Ohio is seen as a very undesirable location to live. Never really understood that though... we have corn! :corn:&nbsp;&nbsp;I have **loved** my time in Ohio, and I truly would not trade it for anything in the world. (_okay maybe bring in Hawaii or Spain and we can start talking_).
 
-![ohio](/ohio.jpg)  
+![ohio](/ohio.jpg)
 
 My mother and father are both from [South Korea (Seoul)](https://en.wikipedia.org/wiki/Seoul), and my
-brother was born there as well. He is currently 23..24..25 years old? yeah, he's pretty old now. He just recently got married and is currently attending [UPenn Dental School](https://www.dental.upenn.edu/). I have been so blessed to grow up with such a loving family, and they have truly made me who I am today.   
+brother was born there as well. He is currently 23..24..25 years old? yeah, he's pretty old now. He just recently got married and is currently attending [UPenn Dental School](https://www.dental.upenn.edu/). I have been so blessed to grow up with such a loving family, and they have truly made me who I am today.
 
 ![fam](/fam2.jpg)
 
+_**don't be fooled by the picture, i'm taller than him - he's on his tippy toes**_
