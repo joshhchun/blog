@@ -19,10 +19,6 @@ jobs:
         with:
           hugo-version: '0.91.2'
           extended: true
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
       - name: cache
         uses: actions/cache@v2
         with:
