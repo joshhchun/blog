@@ -17,17 +17,15 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: ${{ env.HUGO_RELEASE }}
+          hugo-version: '0.98.0'
           extended: true
-        env:
-          HUGO_RELEASE: '0.91.2'
       - name: Build website with Hugo
         run: hugo --minify --i18n-warnings
       - name: Deploy website with rsync
-        uses: burnett01/rsync-deployments@4.1
+        uses: burnett01/rsync-deployments@5.2
         with:
           switches: -avzr --quiet --delete
-          path: p_blog/public/
+          path: public/
           remote_path: ${{ secrets.REMOTE_PATH }}
           remote_host: ${{ secrets.REMOTE_HOST }}
           remote_user: ${{ secrets.REMOTE_USER }}
