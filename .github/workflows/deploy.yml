@@ -23,15 +23,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Cache dependencies
-        uses: actions/cache@v1
+      - name: cache
+      - uses: actions/cache@v2
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
-            ${{ runner.os }}-node-
-      - name: Run Node
-        run: npm ci
+            ${{ runner.os }}-hugomod-
       - name: Build website with Hugo
         run: hugo --minify 
       - name: Deploy website with rsync
