@@ -29,7 +29,7 @@ fprintf(stdout, "ajsdnjwenjfnjewf\n");
 
 `Segmentation fault (core dumped)`
 
-From the moment I started coding (albeit my first language was [MATLAB](https://www.quora.com/Why-is-MATLAB-so-bad)), I knew this is what I wanted to do with my life. The ability to turn _something_ from _nothing_ (minus the billions of transistors) fascinated me.
+From the moment I started coding (albeit my first language was [MATLAB](https://www.quora.com/Why-is-MATLAB-so-bad)), I knew this is what I wanted to do with my life. The ability to create _something_ from _nothing_ (minus the billions of transistors) fascinated me.
 Currently I'm interested in:
 
 > -   Web development
