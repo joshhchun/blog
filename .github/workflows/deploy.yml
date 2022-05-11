@@ -33,7 +33,7 @@ jobs:
         with:
           switches: -avzr --quiet --delete
           path: public/
-          remote_path: /data/blog/
+          remote_path: /data/caddy/hellooo
           remote_host: ${{ secrets.REMOTE_HOST }}
           remote_user: ${{ secrets.REMOTE_USER }}
           remote_key: ${{ secrets.REMOTE_KEY }}
