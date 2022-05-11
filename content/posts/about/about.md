@@ -47,7 +47,7 @@ I know I have so much more to learn so my tech blogs are really just to serve as
 
 My first ever software-related job was being a back-end developer for a start-up called **ZEmployed**, which was created at Notre Dame. I worked at ZEmployed in the summer after my Freshman year. I'm thankful for the experience because it gave me initial exposure to things like [Django Web Framework](https://www.djangoproject.com/), [Git](https://git-scm.com/), [Docker](https://www.docker.com/), and [Kubernetes](https://kubernetes.io/). This startup eventually got funded $50,000 while I was working there.
 
-My second job was at a company called **[Krugle](https://krugle.com/)**, a company based in Cupertino, California. My role at the company was a DevOps Engineer, and I worked there during the Fall semester of my Sophomore year. I'm thankful for my time at Krugle, because it was the first time that I worked at a large-scale company. Developing communication skills and seeing code being deployed at scale was very valuable.
+My second job was at a company called **[Krugle](https://krugle.com/)**, a company based in Cupertino, California. My role at the company was a DevOps Engineer, and I worked there during the Fall semester of my Sophomore year. I'm thankful for my time at Krugle, because it was the first time that I worked at a large-scale company. Developing communication skills and seeing code deployed at scale was very valuable.
 
 This summer, I will be working at **[MITRE](https://www.mitre.org/)** as a Software Engineer Intern in the Cyber Division at their Bedford, Massachusetts office. I don't know too many details on which specific team/project I will be working on yet, but I am beyond excited for the opportunity.
 
