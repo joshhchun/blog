@@ -1,5 +1,6 @@
 ---
-title: "how i built my website with hugo and set up automatic deployment on a VPS with github actions and a docker stack with caddy & nginx"
+title: "How I deploy my Hugo website on my VPS with GitHub Actions and a Caddy-Nginx Docker stack. "
+summary: I built my website with Hugo, and I set up automatic deployment on my VPS with Github Actions and rsync. On my VPS, I have a docker stack where caddy takes care of HTTPS & nginx serves the site.
 date: 2022-05-11T03:00:08-04:00
 showtoc: true
 tags: ["hugo", "caddy", "nginx", "docker", "varnish"]
@@ -8,6 +9,8 @@ cover:
     image: "vps.png"
     alt: Image Loading
 ---
+
+
 
 I think when every developer decides they want to make their own website, they want to make it completely from scratch. For blog purposes though, I found making my own website from scratch to be a little redundant and unneccesarily stressful. I know there are a lot of people that share this sentiment and opt for [Wordpress](https://wordpress.com/). However, I wanted more flexibility/control and to experiment with some newer and more exciting applications.
 
@@ -90,7 +93,7 @@ To break this down a bit, the workflow is triggered every time I **push to the m
 
 As I have mentioned already, I decided to use [Docker](https://docker.com) to containerize my website. Very generally speaking, Docker is a software platform that allows you to deploy applications as self-sufficient _**containers**_ that contain all dependencies like libaries, system tools, code, etc. Essentially, Docker enables you to separate your applications from your infrastructure so that you can build once and run anywhere.
 
-One cool thing about Docker is that you can create a [Docker Network](https://docs.docker.com/network/), that allows you to connect different containers together. To create a Docker Network, simply write up a **docker compose** file. For my website, I created an external network, _"web"_, that connects a [Caddy](https://caddyserver.com/) container and a [Nginx](https://www.nginx.com/) container. Docker allows you to mount directories on containers, and this is how my Caddy container is able to read its Caddyfile (`/data/caddy/Caddyfile`) and my Nginx container is able to access the contents to upload to the website (`/data/blog`).
+One cool thing about Docker is that you can create a [Docker Network](https://docs.docker.com/network/), that allows you to connect different containers together. To create a Docker Network, simply write up a **Docker Compose** file. For my website, I created an external network, _"web"_, that connects a [Caddy](https://caddyserver.com/) container and a [Nginx](https://www.nginx.com/) container. Docker allows you to mount directories on containers, and this is how my Caddy container is able to read its Caddyfile (`/data/caddy/Caddyfile`) and my Nginx container is able to access the contents to upload to the website (`/data/blog`).
 
 **Creating a docker network in the docker compose file**
 
