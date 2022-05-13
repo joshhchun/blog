@@ -10,8 +10,6 @@ cover:
     alt: Image Loading
 ---
 
-
-
 I think when every developer decides they want to make their own website, they want to make it completely from scratch. For blog purposes though, I found making my own website from scratch to be a little redundant and unneccesarily stressful. I know there are a lot of people that share this sentiment and opt for [Wordpress](https://wordpress.com/). However, I wanted more flexibility/control and to experiment with some newer and more exciting applications.
 
 This is when I found [Hugo](https://gohugo.io/), an open-source static site generator built on [Go](https://go.dev/). What makes Hugo stand out from other SSGs (Static Site Generators) is its exceptional speed, efficiency, and flexibility. Hugo is a **great** service, and I really recommend them to anyone who wants to create their own blog. If you are interested in how I configured my site with Hugo, check out my [Blog GitHub Repo](https://github.com/joshhchun/blog).
@@ -20,7 +18,7 @@ For actually deploying my website, there are a couple steps it can be boiled dow
 
 -   Store the Hugo website on a local machine to make edits
 -   Push website changes from local machine to GitHub
--   Use GitHub Actions rsync to automatically upload the HTML and CSS files to a directory that is mounted to a Nginx Docker Container in my Oracle Cloud Virtual Private Server upon a GitHub push
+-   Use GitHub Actions & rsync to automatically upload the HTML and CSS files to a directory that is mounted to a Nginx Docker Container in my Oracle Cloud Virtual Private Server upon a GitHub push
 -   Have a Docker network on my VPS with a Caddy container to handle HTTPS and reverse proxying and a nginx container to actually serve up the website with the HTML and CSS files transferred.
 
 I know there are simpler ways to create/deploy websites, but I really wanted to create a fully autonomous workflow that utilizes a docker stack in case I want to create multiple websites on my server.
@@ -85,9 +83,9 @@ To break this down a bit, the workflow is triggered every time I **push to the m
 2. Checkouts the repository onto the virtual machine so that it can access all of the contents.
 3. Installs Hugo on the virtual machine.
 4. Generates the minified HTML & CSS files on the virtual machine's `/public` folder with the `hugo --minify` command.
-5. Uses rsync to transfer the static files in the `public/` folder to the directory in my Oracle Cloud VPS that is that is mounted on my Docker Container.
+5. Uses rsync to transfer the static files in the `public/` folder to the directory in my Oracle Cloud VPS that is that is mounted on my Nginx Docker Container.
 
--   **Note**: To use rsync you will need to add the remote path, host, user, and SSH Private Key to your VPS. You can add these into your repository's _"secrets"_ for security purposes.
+-   **Note**: To use rsync you will need to add the remote path, host, user, and SSH Private Key to your VPS. You should add these into your repository's _"secrets"_ for security purposes.
 
 # Deploying website on a Caddy Docker stack with Nginx
 
@@ -113,7 +111,7 @@ To break this down a bit...
 
 **Nginx** is also an open-source software used for web serving, and it can be used for reverse proxying, caching, load balancing, etc. I used Nginx in the back-end to actually host my website and serve up my static files as it consistently beats Apache in benchmarks.
 
-With a Docker network, you can put all of the containers in a **completely private and isolated** network. The only container/ports that are open on my network is Port 80 (HTTP) and Port 443 (HTTPS) on my Caddy container. My Nginx container cannot be reached directly from the outside. If a user tries to connect to `https://jchun.me`, my Caddy container will redirect them to Port 80 on the Nginx Container's private IP address - where the contents of the website are actually hosted.
+With a Docker network, you can put all of the containers in a **completely private and isolated** network. The only container/ports that are open on my network are Port 80 (HTTP) and Port 443 (HTTPS) on my Caddy container. My Nginx container cannot be reached directly from the outside. If a user tries to connect to `https://jchun.me`, my Caddy container will redirect them to Port 80 on the Nginx Container's private IP address - where the contents of the website are actually hosted.
 
 This is what my docker compose file looks like:
 
@@ -160,4 +158,4 @@ www.jchun.me {
 
 # Future
 
-For right now, I think even this set up is a little overkill... However, my goal in the far future is to host multiple websites on this VPS, and I wanted to explore Docker some more so I'm happy with the result. For the immediate future though, I would like to set up a [Varnish Cache](https://www.varnish-software.com/community/varnish-cache/) to speed up the the building of my website. I'll never really need it for the purposes of this website :laughing: &nbsp; but I would like to explore.
+For right now, I think this set up is a little overkill... However, my goal in the far future is to host multiple websites on my VPS, and I wanted to explore Docker some more so I'm happy with the result. For the immediate future though, I would like to set up a [Varnish Cache](https://www.varnish-software.com/community/varnish-cache/) to speed up the the building of my website. I'll never really need it for the purposes of this website :laughing: &nbsp;but I would like to explore.
