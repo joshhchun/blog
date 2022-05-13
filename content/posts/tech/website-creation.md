@@ -89,6 +89,8 @@ To break this down a bit, the workflow is triggered every time I **push to the m
 
 # Deploying website on a Caddy Docker stack with Nginx
 
+### Docker
+
 As I have mentioned already, I decided to use [Docker](https://docker.com) to containerize my website. Very generally speaking, Docker is a software platform that allows you to deploy applications as self-sufficient _**containers**_ that contain all dependencies like libaries, system tools, code, etc. Essentially, Docker enables you to separate your applications from your infrastructure so that you can build once and run anywhere.
 
 One cool thing about Docker is that you can create a [Docker Network](https://docs.docker.com/network/), that allows you to connect different containers together. To create a Docker Network, simply write up a **Docker Compose** file. For my website, I created an external network, _"web"_, that connects a [Caddy](https://caddyserver.com/) container and a [Nginx](https://www.nginx.com/) container. Docker allows you to mount directories on containers, and this is how my Caddy container is able to read its Caddyfile (`/data/caddy/Caddyfile`) and my Nginx container is able to access the contents to upload to the website (`/data/blog`).
@@ -107,9 +109,11 @@ This is a simplified diagram of what my VPS looks like with the Docker network:
 
 To break this down a bit...
 
-**Caddy** is an open-source web server written in Go with a number of really nice features like HTTPS, reverse proxying, routing, being container based, etc. The 2 main reasons why I use Caddy is for its automatic TLS certificates from Let's Encrypt to enable HTTPS on your websites and its reverse proxy capabilities.
+### Caddy
+Caddy is an open-source web server written in Go with a number of really nice features like HTTPS, reverse proxying, routing, being container based, etc. The 2 main reasons why I use Caddy is for its automatic TLS certificates from Let's Encrypt to enable HTTPS on your websites and its reverse proxy capabilities.
 
-**Nginx** is also an open-source software used for web serving, and it can be used for reverse proxying, caching, load balancing, etc. I used Nginx in the back-end to actually host my website and serve up my static files as it consistently beats Apache in benchmarks.
+### Nginx
+Nginx is also an open-source software used for web serving, and it can be used for reverse proxying, caching, load balancing, etc. I used Nginx in the back-end to actually host my website and serve up my static files as it consistently beats Apache in benchmarks.
 
 With a Docker network, you can put all of the containers in a **completely private and isolated** network. The only container/ports that are open on my network are Port 80 (HTTP) and Port 443 (HTTPS) on my Caddy container. My Nginx container cannot be reached directly from the outside. If a user tries to connect to `https://jchun.me`, my Caddy container will redirect them to Port 80 on the Nginx Container's private IP address - where the contents of the website are actually hosted.
 
