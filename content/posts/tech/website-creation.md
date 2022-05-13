@@ -102,7 +102,7 @@ networks:
 
 This is a simplified diagram of what my VPS looks like with the Docker network:
 
-{{< figure src="/vps.png" height="500">}}
+![vps](/vps.png)
 
 To break this down a bit...
 
