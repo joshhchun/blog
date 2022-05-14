@@ -45,7 +45,7 @@ params:
         Content:
             "My name is Joshua Chun, and I am currently studying Computer Science at the [University of Notre Dame](https://www.nd.edu/).
             This is my personal website where I will be posting [cool software-related findings](https://jchun.me/tech/),
-            projects, [life-updates](https://jchun.me/life/), and everything else in between."
+            projects, [life-updates](https://jchun.me/life/), and everything else in between. Find all my posts down below or in the menu"
 
     socialIcons:
         - name: github
