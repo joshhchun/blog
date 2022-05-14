@@ -1,0 +1,32 @@
+---
+label: Blog post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: summary
+  label: summary
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: canonicalURL
+  label: canonicalURL
+- type: boolean
+  name: showtoc
+  label: showtoc
+- type: list
+  name: tags
+  label: tags
+- type: field_group
+  name: cover
+  label: cover
+  fields:
+  - type: file
+    name: image
+    label: image
+  - type: text
+    name: alt
+    label: alt
