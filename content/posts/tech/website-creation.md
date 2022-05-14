@@ -2,6 +2,7 @@
 title: "How I deploy my Hugo website on my VPS with GitHub Actions and a Caddy-Nginx Docker stack. "
 summary: I built my website with Hugo, and I set up automatic deployment on my VPS with Github Actions and rsync. On my VPS, I have a docker stack where caddy takes care of HTTPS & nginx serves the site.
 date: 2022-05-11T03:00:08-04:00
+canonicalURL: "https://jchun.me/website-creation"
 showtoc: true
 tags: ["hugo", "caddy", "nginx", "docker", "varnish"]
 draft: false
