@@ -30,3 +30,5 @@ fields:
   - type: text
     name: alt
     label: alt
+pages:
+- content/posts/life/end-of-sophomore-year-reflections-and-goals.md
