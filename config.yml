@@ -55,6 +55,10 @@ params:
 
 menu:
     main:
+        - indentifier: about
+          name: about me
+          url: /about/
+          weight: 5
         - identifier: tech
           name: tech
           url: /posts/tech/
@@ -63,10 +67,10 @@ menu:
           name: life
           url: /posts/life/
           weight: 15
-        - indentifier: about
-          name: about me
-          url: /about/
-          weight: 5
+        - indentifier: tags
+          name: tags
+          url: /tags/
+          weight: 18
         - indentifier: archives
           name: archives
           url: /archives/
