@@ -5,9 +5,13 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
+  default: New site
 - type: textarea
   name: summary
   label: summary
+  default: summary
 - type: datetime
   name: date
   label: date
