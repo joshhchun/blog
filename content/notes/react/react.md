@@ -1,6 +1,6 @@
 ---
-title: React
-summary: "react notes"
+title: ReactJS
+summary: "notes for React"
 url: "/notes/react/"
 date: 2022-05-19T19:12:44-04:00
 showtoc: true
@@ -158,4 +158,48 @@ Like `useState()`, `useEffect()` is a React Hook. useEffect allows functional co
 ```
 this will set the counter to 100 every time the page reloads. Note we use setCounter function because we cannot manually change counter ourselves (e.g. counter = 100). The second argument is the **dependencies array**, where you specify on what event the hook will run. As you can see, the array is empty so it will default set the counter to 100 every time the the component is reloaded (when page is refreshed). If you put `counter` in the array, however, then the counter will be set to 100 every time you manually try to change the counter.
 
+# Async + Await (Promise Functions)
 
+I still need to delve deeper into promise functions and asynchronous code, but they are very useful in React (and vanilla JS in general). Async and await are basically just syntactic sugar for promise functions. We use async and await when we want a function to be **non-blocking**. As in, if we call a function that might take a while (retrieving data from online), we don't want to hold up our entire program. Specifically, when we use `fetch` and `.json()` in JS, those are **promise** functions by themselves and we need to use **async** and **await**.
+
+``` javascript
+const getData = async () => {
+    const response = await fetch('some/website/file.json');
+    const data     = await response.json();
+};
+
+getData();
+```
+Using this function, you can additonally add a **state**, so that you can render up the JSON data to your website. For example, if you write
+``` jsx {hl_lines = [2, 7]}
+const App = () => {
+    const [rawData, setRawData] = useState({Title: "Default", Runtime : "--"})
+
+    const getData = async() => {
+        const response = await fetch("http://www.omdbapi.com/?i=tt3896198&apikey=37f30b34");
+        const data = await response.json();
+        setRawData(data)
+    };
+
+    useEffect(() => {
+        getData();
+    }, [])
+
+    return (
+        <div className="App">
+            <PrintData data={rawData} />
+        </div>
+    );
+};
+```
+You can set `setRawData` as the function to change your state and then call it in the `getData` function. In the example above I used `useEffect` to fetch some JSON data from an API and then use it to change the state of `rawData`. I then send `rawData` to the functional component `PrintData`, which looks like:
+``` jsx
+const PrintData = ({ data }) => {
+    return (
+        <>
+            <h1> Hello { data.Title } </h1>
+            <p> { data.Runtime } </p>
+        </>
+    );
+};
+```
