@@ -44,7 +44,9 @@ params:
     homeInfoParams:
         Title: "Welcome to my blog! \U0001F44B"
         Content:
-            my name is joshua chun, and this is me.
+            My name is Joshua Chun, and I am a rising Junior at the [University of Notre Dame](https://www.nd.edu). This
+            is my personal website where I will be posting life updates, cool software-related findings, projects, and everything
+            else in between.
 
     socialIcons:
         - name: github
