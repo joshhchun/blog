@@ -1,7 +1,7 @@
 ---
 title: Fullstack CRUD App with Java Spring Boot, React, and PostgreSQL
 summary: "Exploring Spring Boot, I decided to make a full stack 'Request Managing' application with React & PostgreSQL."
-url: "/posts/tech/spring-boot"
+url: "/posts/tech/request-manager"
 date: 2022-05-25T11:51:44-04:00
 showtoc: true
 tags: ["java", "spring boot", "react", "postgresql"]
@@ -16,7 +16,7 @@ Java Spring Boot, Spring Data JPA, Hibernate, PostgreSQL, and ReactJS
 
 # Why and What?
 
-Starting my internship this past week, there was a small problem: my project tech stack included Java Spring Boot, and I have never coded in Java before. In all honesty, I've seen so many Java programming memes, I thought it wasn't worth learning the language. To my surprise, however, it only took about one day to learn and get really comfortable with Java - and I really like it. To test if I could make something _somewhat practical_ in Java, I decided to make a RESTful API connected to a PostgreSQL database with a ReactJS front-end. I didn't want to make a simple todo app, so I decided to make a **request manager** that managed a pseudo-company's requests and complaints from users. Users can fill out a form with their name, age, email, and write their message. They can also see all requests & complaints that is in the database. The pseudo-company is able to remove a request || complaint if they wanted to with a DELETE request. 
+Starting my internship this past week, there was a small problem: my project tech stack included Java Spring Boot, and I have never coded in Java before. In all honesty, I've seen so many Java programming memes, I thought it wasn't worth learning the language. To my surprise, however, it only took about one day to learn and get really comfortable with Java - and I really like it. To test if I could make something _somewhat practical_ in Java, I decided to make a RESTful API connected to a PostgreSQL database with a ReactJS front-end. I didn't want to make a simple todo app, so I decided to make a **request manager** that managed a pseudo-company's requests and complaints from users. Users can fill out a form with their name, age, email, and write their message. They can also see all requests & complaints that are in the database. The pseudo-company is able to remove a request || complaint if they wanted to with a DELETE request. 
 
 {{< figure src="/posts/tech/spring-boot/pictures/java.jpeg" align="center" height="400">}}
 
