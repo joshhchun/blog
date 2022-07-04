@@ -2,7 +2,7 @@
 title: "How I deploy my Hugo website on my VPS with GitHub Actions and a Caddy-Nginx Docker stack"
 summary: I built my website with Hugo, and I set up automatic deployment on my VPS with Github Actions and rsync. On my VPS, I have a docker stack where caddy takes care of HTTPS & nginx serves the site.
 date: 2022-05-11T03:00:08-04:00
-canonicalURL: "https://jchun.me/website-creation"
+url: "/posts/tech/website-creation"
 showtoc: true
 tags: ["hugo", "caddy", "nginx", "docker", "varnish"]
 draft: false
@@ -111,9 +111,11 @@ This is a simplified diagram of what my VPS looks like with the Docker network:
 To break this down a bit...
 
 ### Caddy
+
 Caddy is an open-source web server written in Go with a number of really nice features like HTTPS, reverse proxying, routing, being container based, etc. The 2 main reasons why I use Caddy is for its automatic TLS certificates from Let's Encrypt to enable HTTPS on your websites and its reverse proxy capabilities.
 
 ### Nginx
+
 Nginx is also an open-source software used for web serving, and it can be used for reverse proxying, caching, load balancing, etc. I used Nginx in the back-end to actually host my website and serve up my static files as it consistently beats Apache in benchmarks.
 
 With a Docker network, you can put all of the containers in a **completely private and isolated** network. The only container/ports that are open on my network are Port 80 (HTTP) and Port 443 (HTTPS) on my Caddy container. My Nginx container cannot be reached directly from the outside. If a user tries to connect to `https://jchun.me`, my Caddy container will redirect them to Port 80 on the Nginx Container's private IP address - where the contents of the website are actually hosted.

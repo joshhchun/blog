@@ -13,8 +13,6 @@ minify:
 
 params:
     mainSections: posts
-    assets:
-        disableHLJS: true
     env: production
     cover:
         linkFullImages: true
@@ -34,19 +32,25 @@ params:
     hideSummary: false
     showtoc: false
     tocopen: false
-    # Picture next to the home
+    assets:
+        disableHLJS: true
+        favicon: "<link / abs url>"
+        favicon16x16: "<link / abs url>"
+        favicon32x32: "<link / abs url>"
+        apple_touch_icon: "<link / abs url>"
+        safari_pinned_tab: "<link / abs url>"
     # label:
-    #   text: "jchun.me"
-    #   icon: beach3.jpg
-    #   iconHeight: 35
+    #     text: "jchun.me"
+    #     icon: favicon.ico
+    #     iconHeight: 35
 
     # home-info mode
     homeInfoParams:
         Title: "Welcome to my blog! \U0001F44B"
         Content:
-            My name is Joshua Chun, and I am a rising Junior at the [University of Notre Dame](https://www.nd.edu). This
+            "My name is Joshua Chun, and I am a rising Junior at the [University of Notre Dame](https://www.nd.edu). This
             is my personal website where I will be posting life updates, cool software-related findings, projects, and everything
-            else in between.
+            else in between."
 
     socialIcons:
         - name: github
@@ -60,6 +64,10 @@ menu:
           name: about me
           url: /about/
           weight: 5
+        - indentifier: projects
+          name: projects
+          url: /posts/projects/
+          weight: 6
         - identifier: tech
           name: tech
           url: /posts/tech/
