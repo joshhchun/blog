@@ -2,7 +2,7 @@
 title: How I made Pym and Dockerized it in my Caddy stack
 date: 2022-07-05T10:00:25-04:00
 summary: "How Pym works under the hood"
-canonicalURL: ""
+url: "/posts/tech/pym-tutorial/"
 showtoc: true
 tags: []
 draft: false
