@@ -4,6 +4,7 @@ summary: "so i made website"
 date: 2022-07-02T16:16:02-04:00
 url: "/projects/pym"
 showtoc: true
+weight: 1
 tags: ["mongodb", "express", "node", "react"]
 draft: false
 cover:
