@@ -81,7 +81,7 @@ menu:
           url: /tags/
           weight: 18
         - indentifier: archive
-          name: archives
+          name: archive
           url: /archives/
           weight: 20
 
