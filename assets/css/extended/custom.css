@@ -3,3 +3,9 @@
         font-size: 63%;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --gap: 10px;
+    }
+}
