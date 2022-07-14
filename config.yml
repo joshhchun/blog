@@ -61,7 +61,7 @@ params:
 menu:
     main:
         - indentifier: about
-          name: about me
+          name: about
           url: /about/
           weight: 5
         - indentifier: projects
