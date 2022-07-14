@@ -69,13 +69,13 @@ menu:
           url: /posts/projects/
           weight: 6
         - identifier: tech
-          name: tech
+          name: techs
           url: /posts/tech/
           weight: 10
-        - identifier: life
-          name: life
-          url: /posts/life/
-          weight: 15
+        # - identifier: life
+        #   name: life
+        #   url: /posts/life/
+        #   weight: 15
         - indentifier: tags
           name: tags
           url: /tags/
