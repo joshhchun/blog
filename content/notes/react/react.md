@@ -8,6 +8,7 @@ draft: false
 ShowRssButtonInSectionTermList: true
 ---
 
+
 # Functional Components:
 A React functional component is a simple JavaScript function that accepts props and returns a React element. It has become standard practice to use Functional Components - vs Class Based Components.
 
