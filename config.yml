@@ -3,6 +3,8 @@ languageCode: en-us
 title: jchun.me
 theme: PaperMod
 
+googleAnalytics: G-B1WJN3XS9J
+
 enableRobotsTXT: true
 enableInlineShortcodes: true
 enableEmoji: true
