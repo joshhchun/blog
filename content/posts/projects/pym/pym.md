@@ -15,7 +15,7 @@ cover:
 
 ### Tech Stack:
 
-_MERN (MongoDB, Express.JS, React.JS, Node.JS), Docker, Nginx, & Caddy_
+_Typescript + MERN (MongoDB, Express.JS, React.JS, Node.JS), Docker, Nginx, & Caddy_
 
 ## What is it?
 
@@ -105,4 +105,4 @@ Right now, I am very happy with where Pym is. I think it is great for _what it's
 ### Possible Updates:
 
 -   Setting up a Redis cache for quicker experience (MongoDB already has a _LRU-Like_ cache system with indexes, but it does not save the value retrieved from queries). However, right now I believe the website doesn't have enough users where the memory/speed trade-off would be worth it.
--   Migrating to a Typescript / Next.JS / Prisma app? :eyes:
+-   Migrating to a ~~Typescript~~ / Next.JS / Prisma app? :eyes:
