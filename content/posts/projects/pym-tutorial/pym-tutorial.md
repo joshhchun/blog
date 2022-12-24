@@ -2,12 +2,12 @@
 title: How I made Pym and Dockerized it in my Caddy stack
 date: 2022-07-05T10:00:25-04:00
 summary: "How Pym works under the hood"
-url: "/posts/tech/pym-tutorial/"
+url: "/posts/projects/pym-tutorial/"
 showtoc: true
 tags: []
 draft: false
 cover:
-    image: /posts/tech/pym-tutorial/pictures/compose.png
+    image: /posts/projects/pym-tutorial/pictures/compose.png
     alt: "draw.io diagram"
     caption: ""
 ---
@@ -15,7 +15,7 @@ cover:
 
 I just finished up v1 of Pym, and I wanted to make a post that delved deeper into what's going on under the hood. If you want to learn more about **what** Pym is and **how** to use it, check out this [blog post](https://jchun.me/projects/pym/).
 
-**GitHub Repo:** https://github.com/joshhchun/Pym
+**GitHub Repo:** <https://github.com/joshhchun/Pym>
 
 ## Backend (Express / Node.JS)
 
@@ -23,9 +23,9 @@ This was my first time experimenting with a JS backend, and I loved it. I built 
 
 For the API Endpoints, I had 3 different routes.
 
--   Display
--   Image
--   Save
+- Display
+- Image
+- Save
 
 ### Display (GET Endpoint)
 
@@ -266,14 +266,14 @@ Containerizing & deploying this website with Docker on my VPS was very smooth an
 
 This is a _simplified_ version of what my VPS looks like with all my containerized applications.
 
-![compose](/posts/tech/pym-tutorial/pictures/compose.png)
+![compose](/posts/projects/pym-tutorial/pictures/compose.png)
 
 To break this down a bit... Pym is utilizing 4 containers:
 
--   Caddy
--   Nginx (React)
--   Node.js
--   MongoDB
+- Caddy
+- Nginx (React)
+- Node.js
+- MongoDB
 
 ### Caddy
 
