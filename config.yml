@@ -64,14 +64,10 @@ menu:
           name: projects
           url: /posts/projects/
           weight: 6
-        - identifier: posts
-          name: posts
-          url: /posts/
+        - identifier: life
+          name: life
+          url: /posts/life/
           weight: 10
-        # - identifier: life
-        #   name: life
-        #   url: /posts/life/
-        #   weight: 15
         - indentifier: tags
           name: tags
           url: /tags/

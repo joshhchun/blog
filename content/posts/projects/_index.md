@@ -1,3 +1,4 @@
 ---
 title: projects
+hidemeta: true
 ---

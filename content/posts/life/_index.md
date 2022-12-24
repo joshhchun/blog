@@ -1,3 +1,4 @@
 ---
 title: life
+hidemeta: true
 ---
