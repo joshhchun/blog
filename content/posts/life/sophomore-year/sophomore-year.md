@@ -4,12 +4,11 @@ summary: i just finished my sophomore year at nore dame — here are my thoughts
 date: 2022-05-14T01:42:32-04:00
 canonicalURL: "https://jchun.me/sophomore-year"
 showtoc: true
-#tags: ["life"]
 draft: false
-# cover:
-#     image: ""
-#     alt: ""
-#     caption: ""
+cover:
+    image: "/posts/life/sophomore-year/pictures/campus.jpg"
+    alt: "campus pc"
+    caption: ""
 ---
 
 
