@@ -1,21 +1,20 @@
 ---
-title: Pym - MERN based Code/Image Pastebin & URL Shortener
+title: Pym - Code/Image Pastebin & URL Shortener
 summary: "so i made website"
 date: 2022-07-02T16:16:02-04:00
 url: "/projects/pym"
 showtoc: true
-weight: 1
-tags: ["mongodb", "express", "node", "react"]
+tags: ["golang", "react", "postgresql", "vite", "typescript"]
 draft: false
 cover:
-    image: "/posts/projects/pym/pictures/header.png"
-    alt: "header picture"
-    caption: ""
+  image: "/posts/projects/pym/pictures/header.png"
+  alt: "header picture"
+  caption: ""
 ---
 
-### Tech Stack:
+### Tech Stack
 
-_Typescript + MERN (MongoDB, Express.JS, React.JS, Node.JS), Docker, Nginx, & Caddy_
+_Golang, Typescript + React.JS, PostgreSQL, Vite, Docker, Nginx, & Caddy_
 
 ## What is it?
 
@@ -31,7 +30,7 @@ Once you save/upload a post, a unique short URL with a 4 character ID will be ge
 
 Every post is created with a default life time of **15 days**. However, I wanted to implement a LRU-like deletion mechanism, so a post's life time is reset to 15 days every time it is visited to prevent a relevant post from being deleted.
 
-![img](/posts/projects/pym/pictures/pym2.gif)
+![img](/posts/projects/pym/pictures/TUT2.gif)
 |:--:|
 | _Creating a new post with a code snippet and sharing URL_ |
 
@@ -39,9 +38,9 @@ Every post is created with a default life time of **15 days**. However, I wanted
 
 The reason for Pym's creation can be boiled down to a couple of points.
 
--   I wanted an easy & pretty way for my friends and I to share code
--   I often use [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat) and it can't handle large images, messages, or links very well
--   Being more experienced with Python Web Dev, I wanted to explore the Javascript environment (I love it)
+- I wanted an easy & pretty way for my friends and I to share code
+- I often use [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat) and it can't handle large images, messages, or links very well
+- Being more experienced with Python Web Dev, I wanted to explore the Javascript environment (I love it)
 
 There have been so many occasions where my friends and I wanted to share some code with each other, and there just _simply was not a good means to do so_.
 
@@ -53,18 +52,18 @@ My main goal when developing this application was to _keep it simple_.
 
 Yes, features are great but having too much configuration can very easily lead to a messy UI, and that is what turned me away from a lot of alternative websites.
 
-To make a new post, a user just has to click on the `new` button on the top right corner of the home page (https://pym.jchun.me), and from there they can choose to either
+To make a new post, a user just has to click on the `create` button on the top right corner of the home page (<https://pym.jchun.me>), and from there they can choose to either
 
 ### Paste text
 
-![newtext](/posts/projects/pym/pictures/newtext1.png)
+![newtext](/posts/projects/pym/pictures/newtext.png)
 
--   Simply paste some code in the textbox and choose the programming langauge (used for accurate syntax highlighting and supports more than 135 languages)
--   Upon save (button in top right corner), user will be redirected to the new unique URL for sharing.
--   From the CLI you can also make a cURL request:
+- Simply paste some code in the textbox and choose the programming langauge (used for accurate syntax highlighting and supports more than 135 languages)
+- Upon save, user will be redirected to the new unique URL for sharing.
+- From the CLI you can also make a cURL request:
 
 ```bash
-curl -d '{"group": "text", "language": "plaintext", "value":"$TEXT"}' \
+$ curl -d '{"group": "text", "language": "plaintext", "value":"$TEXT"}' \
  -H 'Content-Type: application/json' https://pym.jchun.me/api/save
 ```
 
@@ -74,35 +73,28 @@ curl -d '{"group": "text", "language": "plaintext", "value":"$TEXT"}' \
 
 ![newfile](/posts/projects/pym/pictures/newfile.png)
 
--   User can either drag and drop a file or browse.
--   Currently supports **JPEG**, **PNG**, **HEIC**, **.txt**, **.py**, and **.js**. More file support will be coming shortly.
--   Upon upload, user will be redirected to the new unique URL for sharing.
+- User can either drag and drop a file or browse.
+- If the file is of a popular programming language, it will automatically be converted to a "paste" post with syntax highlighting.
+- Upon upload, user will be redirected to the new unique URL for sharing.
+- From the CLI you can also make a cURL request:
+
+```bash
+$ curl -F "files=@$FILE" https://pym.jchun.me/api/save
+```
+
+`Response > {"shortId": "324f"} `
 
 ### Shorten a URL
 
 ![newurl](/posts/projects/pym/pictures/newurl.png)
 
--   Simply paste the long (or average sized?) URL into the first box and click the upload icon on the right.
--   The newly generated short URL will be displayed in the second box if saved successfully (copy to clipboard button on right).
--   From the CLI you can also make a cURL request:
+- Simply paste the long (or average sized?) URL into the box and click the upload icon on the right.
+- The newly generated short URL will be displayed in the box.
+- From the CLI you can also make a cURL request:
 
 ```bash
-curl -d '{"group": "link", "value":"$LINK"}' -H 'Content-Type: application/json' \
+$ curl -d '{"group": "link", "value":"$LINK"}' -H 'Content-Type: application/json' \
 https://pym.jchun.me/api/save
 ```
 
 `Response > {"shortId":"6t5a"}`
-
-## Future & Updates?
-
-Right now, I am very happy with where Pym is. I think it is great for _what it's supposed to be_. However, things can always be better.
-
-### Immediate Updates:
-
--   Allow for more file types to be uploaded
--   Setup Cronjob for automatic database cleanups (every post has a life time of 15 days, but DB could get cluttered)
-
-### Possible Updates:
-
--   Setting up a Redis cache for quicker experience (MongoDB already has a _LRU-Like_ cache system with indexes, but it does not save the value retrieved from queries). However, right now I believe the website doesn't have enough users where the memory/speed trade-off would be worth it.
--   Migrating to a ~~Typescript~~ / Next.JS / Prisma app? :eyes:
