@@ -7,9 +7,9 @@ showtoc: true
 tags: ["mongodb", "express", "node", "react"]
 draft: false
 cover:
-    image: "/posts/projects/pym/pictures/header.png"
-    alt: "header picture"
-    caption: ""
+  image: "/posts/projects/pym-v1/pictures/header.png"
+  alt: "header picture"
+  caption: ""
 ---
 
 # This version of _Pym_ is outdated, please refer to [Pym v2](https://jchun.me/projects/pym) for the new version
@@ -40,9 +40,9 @@ Every post is created with a default life time of **15 days**. However, I wanted
 
 The reason for Pym's creation can be boiled down to a couple of points.
 
--   I wanted an easy & pretty way for my friends and I to share code
--   I often use [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat) and it can't handle large images, messages, or links very well
--   Being more experienced with Python Web Dev, I wanted to explore the Javascript environment (I love it)
+- I wanted an easy & pretty way for my friends and I to share code
+- I often use [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat) and it can't handle large images, messages, or links very well
+- Being more experienced with Python Web Dev, I wanted to explore the Javascript environment (I love it)
 
 There have been so many occasions where my friends and I wanted to share some code with each other, and there just _simply was not a good means to do so_.
 
@@ -60,9 +60,9 @@ To make a new post, a user just has to click on the `new` button on the top righ
 
 ![newtext](/posts/projects/pym/pictures/newtext1.png)
 
--   Simply paste some code in the textbox and choose the programming langauge (used for accurate syntax highlighting and supports more than 135 languages)
--   Upon save (button in top right corner), user will be redirected to the new unique URL for sharing.
--   From the CLI you can also make a cURL request:
+- Simply paste some code in the textbox and choose the programming langauge (used for accurate syntax highlighting and supports more than 135 languages)
+- Upon save (button in top right corner), user will be redirected to the new unique URL for sharing.
+- From the CLI you can also make a cURL request:
 
 ```bash
 curl -d '{"group": "text", "language": "plaintext", "value":"$TEXT"}' \
@@ -75,17 +75,17 @@ curl -d '{"group": "text", "language": "plaintext", "value":"$TEXT"}' \
 
 ![newfile](/posts/projects/pym/pictures/newfile.png)
 
--   User can either drag and drop a file or browse.
--   Currently supports **JPEG**, **PNG**, **HEIC**, **.txt**, **.py**, and **.js**. More file support will be coming shortly.
--   Upon upload, user will be redirected to the new unique URL for sharing.
+- User can either drag and drop a file or browse.
+- Currently supports **JPEG**, **PNG**, **HEIC**, **.txt**, **.py**, and **.js**. More file support will be coming shortly.
+- Upon upload, user will be redirected to the new unique URL for sharing.
 
 ### Shorten a URL
 
 ![newurl](/posts/projects/pym/pictures/newurl.png)
 
--   Simply paste the long (or average sized?) URL into the first box and click the upload icon on the right.
--   The newly generated short URL will be displayed in the second box if saved successfully (copy to clipboard button on right).
--   From the CLI you can also make a cURL request:
+- Simply paste the long (or average sized?) URL into the first box and click the upload icon on the right.
+- The newly generated short URL will be displayed in the second box if saved successfully (copy to clipboard button on right).
+- From the CLI you can also make a cURL request:
 
 ```bash
 curl -d '{"group": "link", "value":"$LINK"}' -H 'Content-Type: application/json' \
@@ -100,10 +100,10 @@ Right now, I am very happy with where Pym is. I think it is great for _what it's
 
 ### Immediate Updates:
 
--   Allow for more file types to be uploaded
--   Setup Cronjob for automatic database cleanups (every post has a life time of 15 days, but DB could get cluttered)
+- Allow for more file types to be uploaded
+- Setup Cronjob for automatic database cleanups (every post has a life time of 15 days, but DB could get cluttered)
 
 ### Possible Updates:
 
--   Setting up a Redis cache for quicker experience (MongoDB already has a _LRU-Like_ cache system with indexes, but it does not save the value retrieved from queries). However, right now I believe the website doesn't have enough users where the memory/speed trade-off would be worth it.
--   Migrating to a ~~Typescript~~ / Next.JS / Prisma app? :eyes:
+- Setting up a Redis cache for quicker experience (MongoDB already has a _LRU-Like_ cache system with indexes, but it does not save the value retrieved from queries). However, right now I believe the website doesn't have enough users where the memory/speed trade-off would be worth it.
+- Migrating to a ~~Typescript~~ / Next.JS / Prisma app? :eyes:
