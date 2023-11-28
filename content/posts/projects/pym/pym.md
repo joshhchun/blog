@@ -3,7 +3,7 @@ title: Pym - Code/Image Pastebin & URL Shortener
 summary: "so i made website"
 date: 2022-07-02T16:16:02-04:00
 url: "/projects/pym"
-weight: 1
+weight: 2
 showtoc: true
 tags: ["golang", "react", "postgresql", "vite", "typescript"]
 draft: false
