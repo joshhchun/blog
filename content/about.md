@@ -17,7 +17,7 @@ weight: 1
 
 ## Academia
 
-I am currently a Glenna R. Joyce Scholar and Junior at the [University of Notre Dame](https://nd.edu). I originally came to Notre Dame as a Chemical Engineer on the pre-med track, but I quickly found my love for coding.
+I am currently a Glenna R. Joyce Scholar and Senior at the [University of Notre Dame](https://nd.edu). I originally came to Notre Dame as a Chemical Engineer on the pre-med track, but I quickly found my love for coding.
 
 ```C
 fprintf(stdout, "here1\n");
@@ -47,11 +47,11 @@ I know I have so much more to learn so my tech blogs are really just to serve as
 
 ### `Amazon`
 
-This upcoming summer (2023), I will be working at Amazon as a **Software Development Engineer** in their Seattle, Washington office. I'm not exactly sure yet what team I will be working with, but I am beyond excited for the opportunity
+This past summer, I worked at Amazon as a **Software Development Engineer**, in their Seattle, Washington office. I spearheaded the design and development of an autonomous workflow for sanitizing customer accounts when fraud has been detected. For this, I developed a suite of 3 distinct lambdas and 5 proxies that interfaced with various downstream services. I also created robust monitoring systems encompassing alarms, metrics, and dashboards, enabling swift issue resolution and system optimization for this workflow. In terms of infra, I leveraged AWS CDK for Infrastructure as Code (IaC), enhancing scalability and reproducibility. I also went beyond the original project scope by accomplishing 5 stretch goals, including integrating legacy actions into a new architecture, establishing safe checks for the workflow, reimplementing legacy services in native AWS, and developing a pipeline blockage monitor. In total, I merged 6,607 lines of code into production across 5 distinct packages, spread over 18 code reviews.
 
 ### `MITRE`
 
-This past summer, I wored at MITRE as a **Software Engineer Intern** in their Bedford, Massachusetts office. I helped design and develop a backend system in Java Spring with an API Gateway and microservices communicating through REST APIs and message queues (Kafka, RabbitMQ). I also wrote methods in the database service layer with Spring Data JPA for handling queries with the PostgreSQL database, and I developed an API Polling microservice to perform general GET Requests with endpoint customization to extract and handle data from an external source.
+In the summer after my Sophomore Year, I wored at MITRE as a **Software Engineer Intern** in their Bedford, Massachusetts office. I helped design and develop a backend system in Java Spring with an API Gateway and microservices communicating through REST APIs and message queues (Kafka, RabbitMQ). I also wrote methods in the database service layer with Spring Data JPA for handling queries with the PostgreSQL database, and I developed an API Polling microservice to perform general GET Requests with endpoint customization to extract and handle data from an external source.
 
 ### `Krugle`
 
