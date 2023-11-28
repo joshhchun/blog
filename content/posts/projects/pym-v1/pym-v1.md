@@ -32,7 +32,7 @@ Once you save/upload a post, a unique short URL with a 4 character ID will be ge
 
 Every post is created with a default life time of **15 days**. However, I wanted to implement a LRU-like deletion mechanism, so a post's life time is reset to 15 days every time it is visited to prevent a relevant post from being deleted.
 
-![img](/posts/projects/pym/pictures/pym2.gif)
+![img](/posts/projects/pym-v1/pictures/pym2.gif)
 |:--:|
 | _Creating a new post with a code snippet and sharing URL_ |
 
@@ -58,7 +58,7 @@ To make a new post, a user just has to click on the `new` button on the top righ
 
 ### Paste text
 
-![newtext](/posts/projects/pym/pictures/newtext1.png)
+![newtext](/posts/projects/pym-v1/pictures/newtext1.png)
 
 - Simply paste some code in the textbox and choose the programming langauge (used for accurate syntax highlighting and supports more than 135 languages)
 - Upon save (button in top right corner), user will be redirected to the new unique URL for sharing.
@@ -73,7 +73,7 @@ curl -d '{"group": "text", "language": "plaintext", "value":"$TEXT"}' \
 
 ### Upload a file
 
-![newfile](/posts/projects/pym/pictures/newfile.png)
+![newfile](/posts/projects/pym-v1/pictures/newfile.png)
 
 - User can either drag and drop a file or browse.
 - Currently supports **JPEG**, **PNG**, **HEIC**, **.txt**, **.py**, and **.js**. More file support will be coming shortly.
@@ -81,7 +81,7 @@ curl -d '{"group": "text", "language": "plaintext", "value":"$TEXT"}' \
 
 ### Shorten a URL
 
-![newurl](/posts/projects/pym/pictures/newurl.png)
+![newurl](/posts/projects/pym-v1/pictures/newurl.png)
 
 - Simply paste the long (or average sized?) URL into the first box and click the upload icon on the right.
 - The newly generated short URL will be displayed in the second box if saved successfully (copy to clipboard button on right).
