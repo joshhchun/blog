@@ -44,7 +44,7 @@ params:
     homeInfoParams:
         Title: "Welcome to my blog! \U0001F44B"
         Content:
-            "My name is Joshua Chun, and I am a Senior at the [University of Notre Dame](https://www.nd.edu). This
+            "My name is Joshua Chun, and I am a recent graduate from the [University of Notre Dame](https://www.nd.edu). This
             is my personal website where I will be posting life updates, cool software-related findings, projects, and everything
             else in between."
 

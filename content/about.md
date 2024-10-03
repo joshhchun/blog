@@ -17,7 +17,7 @@ weight: 1
 
 ## Academia
 
-I am currently a Glenna R. Joyce Scholar and Senior at the [University of Notre Dame](https://nd.edu). I originally came to Notre Dame as a Chemical Engineer on the pre-med track, but I quickly found my love for coding.
+I am a recent graduate from the [University of Notre Dame](https://nd.edu). I originally came to Notre Dame as a Chemical Engineer on the pre-med track, but I quickly found my love for coding.
 
 ```C
 fprintf(stdout, "here1\n");
