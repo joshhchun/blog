@@ -7,7 +7,7 @@ summary: this is everything to know about me
 hidemeta: true
 comments: false
 cover:
-    image: beach.jpg
+    image: about.jpg
     alt: Image Loading
     # Add link
 weight: 1
